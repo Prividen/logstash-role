@@ -8,3 +8,11 @@
   fail:
     msg: "Please provide array of elasticsearch hosts in 'elasticsearch_hosts' variable"
   when: elasticsearch_hosts is undefined
+
+- name: Create files directory
+  delegate_to: localhost
+  run_once: true
+  file:
+    path: files
+    state: directory
+    mode: 0755

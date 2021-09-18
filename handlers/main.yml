@@ -6,4 +6,3 @@
     state: restarted
     enabled: true
   tags: logstash
-  when: ansible_virtualization_type != 'docker'

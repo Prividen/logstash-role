@@ -1,22 +1,14 @@
 input {
-  beats {
-    port => 5044
+  tcp {
+    port => {{ logstash_tcp_test_port }}
   }
 }
-
-
-filter {
-  grok {
-    match => { "message" => "%{SYSLOGLINE}"}
-   }
-}
-
 
 output {
   elasticsearch {
     hosts => [{% for ehost in elasticsearch_hosts %}{{
 		', ' if loop.index > 1 else ''
 	}}"http://{{ hostvars[ehost].ansible_all_ipv4_addresses[0] | default(ehost) }}:9200"{% endfor %}]
-    index => "logstash-logs-%{+YYYY.MM}"
+    index => "logstash-test"
   }
 }
