@@ -54,5 +54,5 @@ verifier:
 
 lint: |
   set -e
-  yamllint .
+  yamllint -c ./.yamllint .
   ansible-lint
