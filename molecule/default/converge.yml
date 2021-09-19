@@ -2,6 +2,6 @@
 - name: Converge
   hosts: all
   tasks:
-    - name: "Include logstash-role"
+    - name: "Include logstash_role"
       include_role:
-        name: "logstash-role"
+        name: "logstash_role"

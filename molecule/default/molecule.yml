@@ -47,6 +47,7 @@ provisioner:
         logstash_version: "{{ elk_stack_version }}"
         elasticsearch_hosts: [ '127.0.0.1' ]
         logstash_tcp_test_port: 5045
+        es_java_memory_gb: 1
 
 verifier:
   name: ansible

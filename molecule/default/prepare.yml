@@ -17,8 +17,8 @@
       copy:
         dest: /etc/elasticsearch/jvm.options.d/local.options
         content: |
-          -Xms3g
-          -Xmx3g
+          -Xms{{ es_java_memory_gb }}g
+          -Xmx{{ es_java_memory_gb }}g
         mode: 0644
 
     - name: Create a directory for Logstash configs
@@ -35,4 +35,4 @@
         dest: /etc/logstash/conf.d/logstash-tcp-test.conf
 
   roles:
-    - elasticsearch-role
+    - elasticsearch_role

@@ -18,7 +18,7 @@ Example Playbook
     - name: Install Logstash
       hosts: logstash
       roles:
-        - logstash-role
+        - logstash_role
 
 
 License

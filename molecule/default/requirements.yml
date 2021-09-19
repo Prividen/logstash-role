@@ -1,5 +1,4 @@
 ---
 - src: https://github.com/Prividen/elasticsearch_role
-  scm: git
-  version: "2.1.0-mk"
-  name: elasticsearch-role
+  version: "2.1.2-mk"
+  name: elasticsearch_role

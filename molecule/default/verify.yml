@@ -30,3 +30,4 @@
     - name: Check if test string found
       assert:
         that: logstash_status.json.hits.total.value == 1
+        quiet: true
